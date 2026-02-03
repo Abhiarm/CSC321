@@ -81,7 +81,7 @@ def create_report():
     
     # Team Members
     story.append(Paragraph("<b>Team Members:</b>", body_style))
-    story.append(Paragraph("[Your Name Here]", body_style))
+    story.append(Paragraph("Abhiram Yakkali", body_style))
     story.append(Spacer(1, 20))
     
     # Citations
