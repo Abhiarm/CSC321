@@ -139,6 +139,90 @@ def create_report():
         body_style
     ))
     
+    # Add collision analysis table
+    story.append(Paragraph("Collision Analysis Data (8-50 bits)", subheading_style))
+    
+    # Read collision results from CSV if available
+    collision_table_data = [['Digest Bits', 'Hashes Required', 'Expected (2^(n/2))', 'Time (s)']]
+    try:
+        with open('Module4/collision_results.csv', 'r') as f:
+            lines = f.readlines()[1:]  # Skip header
+            for line in lines:
+                parts = line.strip().split(',')
+                if len(parts) >= 4:
+                    bits = parts[0]
+                    num_hashes = f"{int(parts[1]):,}"
+                    expected = f"{int(float(parts[3])):,}"
+                    time_s = f"{float(parts[2]):.4f}"
+                    collision_table_data.append([bits, num_hashes, expected, time_s])
+    except FileNotFoundError:
+        collision_table_data.append(['--', '--', '--', '--'])
+    
+    collision_table = Table(collision_table_data, colWidths=[1*inch, 1.3*inch, 1.3*inch, 1*inch])
+    collision_table.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 9),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 8),
+        ('BACKGROUND', (0, 1), (-1, -1), colors.Color(0.95, 0.95, 0.95)),
+        ('TEXTCOLOR', (0, 1), (-1, -1), colors.black),
+        ('FONTNAME', (0, 1), (-1, -1), 'Helvetica'),
+        ('FONTSIZE', (0, 1), (-1, -1), 8),
+        ('GRID', (0, 0), (-1, -1), 0.5, colors.black),
+    ]))
+    story.append(collision_table)
+    story.append(Spacer(1, 15))
+    
+    # Add collision analysis graph if it exists
+    if os.path.exists('Module4/collision_analysis.png'):
+        story.append(Paragraph("Collision Analysis Graph", subheading_style))
+        img = Image('Module4/collision_analysis.png', width=6*inch, height=2.1*inch)
+        story.append(img)
+        story.append(Spacer(1, 15))
+    
+    # Add collision examples table
+    story.append(Paragraph("Collision Examples (Hash Values for Each Bit Size)", subheading_style))
+    story.append(Paragraph(
+        "The following table shows actual collision examples found for each digest size. "
+        "Two different messages produce the same truncated hash value.",
+        body_style
+    ))
+    
+    collision_examples_data = [['Bits', 'Truncated Hash', 'Message 1 (hex)', 'Message 2 (hex)']]
+    try:
+        with open('Module4/collision_examples.csv', 'r') as f:
+            lines = f.readlines()[1:]  # Skip header
+            for line in lines:
+                parts = line.strip().split(',')
+                if len(parts) >= 4:
+                    bits = parts[0]
+                    hash_val = parts[1]
+                    # Truncate message hex for display (first 16 chars)
+                    m1_hex = parts[2][:16] + '...' if len(parts[2]) > 16 else parts[2]
+                    m2_hex = parts[3][:16] + '...' if len(parts[3]) > 16 else parts[3]
+                    collision_examples_data.append([bits, hash_val, m1_hex, m2_hex])
+    except FileNotFoundError:
+        collision_examples_data.append(['--', '--', '--', '--'])
+    
+    collision_examples_table = Table(collision_examples_data, colWidths=[0.5*inch, 1.3*inch, 1.5*inch, 1.5*inch])
+    collision_examples_table.setStyle(TableStyle([
+        ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+        ('FONTSIZE', (0, 0), (-1, 0), 9),
+        ('BOTTOMPADDING', (0, 0), (-1, 0), 8),
+        ('BACKGROUND', (0, 1), (-1, -1), colors.Color(0.95, 0.95, 0.95)),
+        ('TEXTCOLOR', (0, 1), (-1, -1), colors.black),
+        ('FONTNAME', (0, 1), (-1, -1), 'Courier'),
+        ('FONTSIZE', (0, 1), (-1, -1), 7),
+        ('GRID', (0, 0), (-1, -1), 0.5, colors.black),
+    ]))
+    story.append(collision_examples_table)
+    story.append(Spacer(1, 15))
+    
     # Question 2 Answer
     story.append(Paragraph("Question 2: Collision Analysis", subheading_style))
     story.append(Paragraph(

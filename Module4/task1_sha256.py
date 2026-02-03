@@ -186,7 +186,7 @@ def task_1c_collision_analysis():
     print("Task 1c: Collision Finding Analysis (Birthday Attack)")
     print("=" * 60)
     
-    results: List[Tuple[int, int, float]] = []
+    results: List[Tuple[int, int, float, bytes, bytes, str]] = []
     
     # Test digest sizes from 8 to 50 bits in increments of 2
     for bits in range(8, 52, 2):
@@ -201,7 +201,7 @@ def task_1c_collision_analysis():
             assert h1 == h2, "Collision verification failed!"
             assert m1 != m2, "Messages should be different!"
             
-            results.append((bits, num_hashes, elapsed))
+            results.append((bits, num_hashes, elapsed, m1, m2, h1))
             print(f"  Collision found!")
             print(f"  Message 1: {m1[:50]}...")
             print(f"  Message 2: {m2[:50]}...")
@@ -217,7 +217,7 @@ def task_1c_collision_analysis():
     return results
 
 
-def plot_results(results: List[Tuple[int, int, float]]):
+def plot_results(results: List[Tuple[int, int, float, bytes, bytes, str]]):
     """Generate plots for collision analysis results."""
     if not results:
         print("No results to plot.")
@@ -255,14 +255,23 @@ def plot_results(results: List[Tuple[int, int, float]]):
     plt.close()
 
 
-def save_results_to_file(results: List[Tuple[int, int, float]]):
+def save_results_to_file(results: List[Tuple[int, int, float, bytes, bytes, str]]):
     """Save collision analysis results to a CSV file."""
     with open('Module4/collision_results.csv', 'w') as f:
         f.write("Digest_Bits,Num_Hashes,Time_Seconds,Expected_Hashes\n")
-        for bits, num_hashes, elapsed in results:
+        for bits, num_hashes, elapsed, m1, m2, hash_val in results:
             expected = 2 ** (bits / 2)
             f.write(f"{bits},{num_hashes},{elapsed:.6f},{expected:.0f}\n")
     print("Results saved to Module4/collision_results.csv")
+    
+    # Save collision examples to a separate file
+    with open('Module4/collision_examples.csv', 'w') as f:
+        f.write("Digest_Bits,Hash,Message1_Hex,Message2_Hex\n")
+        for bits, num_hashes, elapsed, m1, m2, hash_val in results:
+            m1_hex = m1.hex()
+            m2_hex = m2.hex()
+            f.write(f"{bits},{hash_val},{m1_hex},{m2_hex}\n")
+    print("Collision examples saved to Module4/collision_examples.csv")
 
 
 def main():
