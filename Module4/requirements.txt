@@ -1,0 +1,11 @@
+# Requirements for Cryptographic Hash Functions Lab
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+bcrypt>=4.0.0
+nltk>=3.8.0
+matplotlib>=3.5.0
+reportlab>=4.0.0
+
+# Optional: For better performance on some systems
+# cffi>=1.15.0

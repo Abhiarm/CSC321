@@ -1,0 +1,127 @@
+[2026-02-02 00:43:25] Background mode enabled. Logging to: Module4/cracking_log_20260202_004325.txt
+[2026-02-02 00:43:25] ======================================================================
+[2026-02-02 00:43:25] TASK 2: BCRYPT PASSWORD CRACKER
+[2026-02-02 00:43:25] ======================================================================
+[2026-02-02 00:43:25] 
+AI Citation: Claude (Anthropic) was used to assist with code generation.
+
+[2026-02-02 00:43:25] 
+[2026-02-02 00:43:25] Parsing shadow file...
+[2026-02-02 00:43:25] 
+Found 15 users to crack:
+[2026-02-02 00:43:25] ----------------------------------------------------------------------
+[2026-02-02 00:43:25] User         Algorithm  Workfactor   Salt                    
+[2026-02-02 00:43:25] ----------------------------------------------------------------------
+[2026-02-02 00:43:25] Bilbo        2b         8            J9FW66ZdPI2nrIMcOxFYI.  
+[2026-02-02 00:43:25] Gandalf      2b         8            J9FW66ZdPI2nrIMcOxFYI.  
+[2026-02-02 00:43:25] Thorin       2b         8            J9FW66ZdPI2nrIMcOxFYI.  
+[2026-02-02 00:43:25] Fili         2b         9            M9xNRFBDn0pUkPKIVCSBzu  
+[2026-02-02 00:43:25] Kili         2b         9            M9xNRFBDn0pUkPKIVCSBzu  
+[2026-02-02 00:43:25] Balin        2b         10           xGKjb94iwmlth954hEaw3O  
+[2026-02-02 00:43:25] Dwalin       2b         10           xGKjb94iwmlth954hEaw3O  
+[2026-02-02 00:43:25] Oin          2b         10           xGKjb94iwmlth954hEaw3O  
+[2026-02-02 00:43:25] Gloin        2b         11           /8UByex2ktrWATZOBLZ0Du  
+[2026-02-02 00:43:25] Dori         2b         11           /8UByex2ktrWATZOBLZ0Du  
+[2026-02-02 00:43:25] Nori         2b         11           /8UByex2ktrWATZOBLZ0Du  
+[2026-02-02 00:43:25] Ori          2b         12           rMeWZtAVcGHLEiDNeKCz8O  
+[2026-02-02 00:43:25] Bifur        2b         12           rMeWZtAVcGHLEiDNeKCz8O  
+[2026-02-02 00:43:25] Bofur        2b         12           rMeWZtAVcGHLEiDNeKCz8O  
+[2026-02-02 00:43:25] Durin        2b         13           6ypcazOOkUT/a7EwMuIjH.  
+[2026-02-02 00:43:25] 
+[2026-02-02 00:43:25] Loading word list...
+[2026-02-02 00:43:25] 
+[2026-02-02 00:43:25] Estimated cracking times (worst case per user, sequential):
+[2026-02-02 00:43:25] ----------------------------------------------------------------------
+[2026-02-02 00:43:25]   Workfactor 8: ~1.1 hours per user (3 users)
+[2026-02-02 00:43:25]   Workfactor 9: ~2.2 hours per user (2 users)
+[2026-02-02 00:43:25]   Workfactor 10: ~4.1 hours per user (3 users)
+[2026-02-02 00:43:25]   Workfactor 11: ~8.2 hours per user (3 users)
+[2026-02-02 00:43:25]   Workfactor 12: ~15.6 hours per user (3 users)
+[2026-02-02 00:43:25]   Workfactor 13: ~31.3 hours per user (1 users)
+[2026-02-02 00:43:25] 
+[2026-02-02 00:43:25] 
+======================================================================
+[2026-02-02 00:43:25] STARTING PASSWORD CRACKING (PARALLEL - 8 cores)
+[2026-02-02 00:43:25] ======================================================================
+[2026-02-02 00:43:25] 
+======================================================================
+[2026-02-02 00:43:25] CRACKING WORKFACTOR 8 (3 users) - 8 cores
+[2026-02-02 00:43:25] ======================================================================
+[2026-02-02 00:43:25]   Cracking Bilbo...
+[2026-02-02 00:49:58]   [+] FOUND: Bilbo's password is 'welcome' (Time: 392.82s, Word index: 131,154)
+[2026-02-02 00:49:58]   Cracking Gandalf...
+[2026-02-02 00:56:29]   [+] FOUND: Gandalf's password is 'wizard' (Time: 390.51s, Word index: 132,327)
+[2026-02-02 00:56:29]   Cracking Thorin...
+[2026-02-02 01:02:46]   [+] FOUND: Thorin's password is 'diamond' (Time: 377.49s, Word index: 31,383)
+[2026-02-02 01:02:46] 
+======================================================================
+[2026-02-02 01:02:46] CRACKING WORKFACTOR 9 (2 users) - 8 cores
+[2026-02-02 01:02:46] ======================================================================
+[2026-02-02 01:02:46]   Cracking Fili...
+[2026-02-02 01:15:49]   [+] FOUND: Fili's password is 'desire' (Time: 782.39s, Word index: 30,865)
+[2026-02-02 01:15:49]   Cracking Kili...
+[2026-02-02 01:28:10]   [+] FOUND: Kili's password is 'ossify' (Time: 740.89s, Word index: 76,508)
+[2026-02-02 01:28:10] 
+======================================================================
+[2026-02-02 01:28:10] CRACKING WORKFACTOR 10 (3 users) - 8 cores
+[2026-02-02 01:28:10] ======================================================================
+[2026-02-02 01:28:10]   Cracking Balin...
+[2026-02-02 01:54:07]   [+] FOUND: Balin's password is 'hangout' (Time: 1557.72s, Word index: 49,557)
+[2026-02-02 01:54:07]   Cracking Dwalin...
+[2026-02-02 02:16:49]   [+] FOUND: Dwalin's password is 'drossy' (Time: 1361.81s, Word index: 34,352)
+[2026-02-02 02:16:49]   Cracking Oin...
+[2026-02-02 02:40:45]   [+] FOUND: Oin's password is 'ispaghul' (Time: 1436.17s, Word index: 57,371)
+[2026-02-02 02:40:45] 
+======================================================================
+[2026-02-02 02:40:45] CRACKING WORKFACTOR 11 (3 users) - 8 cores
+[2026-02-02 02:40:45] ======================================================================
+[2026-02-02 02:40:45]   Cracking Gloin...
+[2026-02-02 03:29:02]   [+] FOUND: Gloin's password is 'oversave' (Time: 2896.63s, Word index: 78,208)
+[2026-02-02 03:29:02]   Cracking Dori...
+[2026-02-02 04:14:58]   [+] FOUND: Dori's password is 'indoxylic' (Time: 2755.79s, Word index: 55,191)
+[2026-02-02 04:14:58]   Cracking Nori...
+[2026-02-02 05:03:47]   [+] FOUND: Nori's password is 'swagsman' (Time: 2929.05s, Word index: 111,324)
+[2026-02-02 05:03:47] 
+======================================================================
+[2026-02-02 05:03:47] CRACKING WORKFACTOR 12 (3 users) - 8 cores
+[2026-02-02 05:03:47] ======================================================================
+[2026-02-02 05:03:47]   Cracking Ori...
+[2026-02-02 06:34:37]   [+] FOUND: Ori's password is 'airway' (Time: 5450.16s, Word index: 2,697)
+[2026-02-02 06:34:37]   Cracking Bifur...
+[2026-02-02 08:10:04]   [+] FOUND: Bifur's password is 'corrosible' (Time: 5727.11s, Word index: 26,031)
+[2026-02-02 08:10:04]   Cracking Bofur...
+[2026-02-02 09:47:21]   [+] FOUND: Bofur's password is 'libellate' (Time: 5837.28s, Word index: 61,992)
+[2026-02-02 09:47:21] 
+======================================================================
+[2026-02-02 09:47:21] CRACKING WORKFACTOR 13 (1 users) - 8 cores
+[2026-02-02 09:47:21] ======================================================================
+[2026-02-02 09:47:21]   Cracking Durin...
+[2026-02-02 13:49:11]   [+] FOUND: Durin's password is 'purrone' (Time: 14509.72s, Word index: 90,305)
+[2026-02-02 13:49:11] 
+======================================================================
+[2026-02-02 13:49:11] CRACKING SUMMARY
+[2026-02-02 13:49:11] ======================================================================
+[2026-02-02 13:49:11] 
+User         Password             Time (s)        Workfactor  
+[2026-02-02 13:49:11] ----------------------------------------------------------------------
+[2026-02-02 13:49:11] Bilbo        welcome              392.82          8           
+[2026-02-02 13:49:11] Gandalf      wizard               390.51          8           
+[2026-02-02 13:49:11] Thorin       diamond              377.49          8           
+[2026-02-02 13:49:11] Fili         desire               782.39          9           
+[2026-02-02 13:49:11] Kili         ossify               740.89          9           
+[2026-02-02 13:49:11] Balin        hangout              1557.72         10          
+[2026-02-02 13:49:11] Dwalin       drossy               1361.81         10          
+[2026-02-02 13:49:11] Oin          ispaghul             1436.17         10          
+[2026-02-02 13:49:11] Dori         indoxylic            2755.79         11          
+[2026-02-02 13:49:11] Gloin        oversave             2896.63         11          
+[2026-02-02 13:49:11] Nori         swagsman             2929.05         11          
+[2026-02-02 13:49:11] Bifur        corrosible           5727.11         12          
+[2026-02-02 13:49:11] Bofur        libellate            5837.28         12          
+[2026-02-02 13:49:11] Ori          airway               5450.16         12          
+[2026-02-02 13:49:11] Durin        purrone              14509.72        13          
+[2026-02-02 13:49:11] ----------------------------------------------------------------------
+[2026-02-02 13:49:11] Cracked: 15/15 passwords
+[2026-02-02 13:49:11] Total time: 47145.63 seconds (785.76 minutes, 13.10 hours)
+[2026-02-02 13:49:11] Results saved to Module4/cracking_results.csv
+[2026-02-02 13:49:11] 
+=== Completed at 2026-02-02 13:49:11.586611 ===

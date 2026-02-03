@@ -1,0 +1,17 @@
+=== Password Cracking Started: 2026-02-02 00:43:25.667188 ===
+
+[2026-02-02 00:49:58] Bilbo: welcome (time: 392.82s, attempts: 131154, wf: 8)
+[2026-02-02 00:56:29] Gandalf: wizard (time: 390.51s, attempts: 132327, wf: 8)
+[2026-02-02 01:02:46] Thorin: diamond (time: 377.49s, attempts: 31383, wf: 8)
+[2026-02-02 01:15:49] Fili: desire (time: 782.39s, attempts: 30865, wf: 9)
+[2026-02-02 01:28:10] Kili: ossify (time: 740.89s, attempts: 76508, wf: 9)
+[2026-02-02 01:54:07] Balin: hangout (time: 1557.72s, attempts: 49557, wf: 10)
+[2026-02-02 02:16:49] Dwalin: drossy (time: 1361.81s, attempts: 34352, wf: 10)
+[2026-02-02 02:40:45] Oin: ispaghul (time: 1436.17s, attempts: 57371, wf: 10)
+[2026-02-02 03:29:02] Gloin: oversave (time: 2896.63s, attempts: 78208, wf: 11)
+[2026-02-02 04:14:58] Dori: indoxylic (time: 2755.79s, attempts: 55191, wf: 11)
+[2026-02-02 05:03:47] Nori: swagsman (time: 2929.05s, attempts: 111324, wf: 11)
+[2026-02-02 06:34:37] Ori: airway (time: 5450.16s, attempts: 2697, wf: 12)
+[2026-02-02 08:10:04] Bifur: corrosible (time: 5727.11s, attempts: 26031, wf: 12)
+[2026-02-02 09:47:21] Bofur: libellate (time: 5837.28s, attempts: 61992, wf: 12)
+[2026-02-02 13:49:11] Durin: purrone (time: 14509.72s, attempts: 90305, wf: 13)

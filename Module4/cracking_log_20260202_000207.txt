@@ -1,0 +1,62 @@
+[2026-02-02 00:02:07] Background mode enabled. Logging to: Module4/cracking_log_20260202_000207.txt
+[2026-02-02 00:02:07] ======================================================================
+[2026-02-02 00:02:07] TASK 2: BCRYPT PASSWORD CRACKER
+[2026-02-02 00:02:07] ======================================================================
+[2026-02-02 00:02:07] 
+AI Citation: Claude (Anthropic) was used to assist with code generation.
+
+[2026-02-02 00:02:07] 
+[2026-02-02 00:02:07] Parsing shadow file...
+[2026-02-02 00:02:07] 
+Found 15 users to crack:
+[2026-02-02 00:02:07] ----------------------------------------------------------------------
+[2026-02-02 00:02:07] User         Algorithm  Workfactor   Salt                    
+[2026-02-02 00:02:07] ----------------------------------------------------------------------
+[2026-02-02 00:02:07] Bilbo        2b         8            J9FW66ZdPI2nrIMcOxFYI.  
+[2026-02-02 00:02:07] Gandalf      2b         8            J9FW66ZdPI2nrIMcOxFYI.  
+[2026-02-02 00:02:07] Thorin       2b         8            J9FW66ZdPI2nrIMcOxFYI.  
+[2026-02-02 00:02:07] Fili         2b         9            M9xNRFBDn0pUkPKIVCSBzu  
+[2026-02-02 00:02:07] Kili         2b         9            M9xNRFBDn0pUkPKIVCSBzu  
+[2026-02-02 00:02:07] Balin        2b         10           xGKjb94iwmlth954hEaw3O  
+[2026-02-02 00:02:07] Dwalin       2b         10           xGKjb94iwmlth954hEaw3O  
+[2026-02-02 00:02:07] Oin          2b         10           xGKjb94iwmlth954hEaw3O  
+[2026-02-02 00:02:07] Gloin        2b         11           /8UByex2ktrWATZOBLZ0Du  
+[2026-02-02 00:02:07] Dori         2b         11           /8UByex2ktrWATZOBLZ0Du  
+[2026-02-02 00:02:07] Nori         2b         11           /8UByex2ktrWATZOBLZ0Du  
+[2026-02-02 00:02:07] Ori          2b         12           rMeWZtAVcGHLEiDNeKCz8O  
+[2026-02-02 00:02:07] Bifur        2b         12           rMeWZtAVcGHLEiDNeKCz8O  
+[2026-02-02 00:02:07] Bofur        2b         12           rMeWZtAVcGHLEiDNeKCz8O  
+[2026-02-02 00:02:07] Durin        2b         13           6ypcazOOkUT/a7EwMuIjH.  
+[2026-02-02 00:02:07] 
+[2026-02-02 00:02:07] Loading word list...
+[2026-02-02 00:02:08] 
+[2026-02-02 00:02:08] Estimated cracking times (worst case per user, sequential):
+[2026-02-02 00:02:08] ----------------------------------------------------------------------
+[2026-02-02 00:02:08]   Workfactor 8: ~1.1 hours per user (3 users)
+[2026-02-02 00:02:08]   Workfactor 9: ~2.2 hours per user (2 users)
+[2026-02-02 00:02:08]   Workfactor 10: ~4.1 hours per user (3 users)
+[2026-02-02 00:02:08]   Workfactor 11: ~8.2 hours per user (3 users)
+[2026-02-02 00:02:08]   Workfactor 12: ~15.6 hours per user (3 users)
+[2026-02-02 00:02:08]   Workfactor 13: ~31.3 hours per user (1 users)
+[2026-02-02 00:02:08] 
+[2026-02-02 00:02:08] 
+======================================================================
+[2026-02-02 00:02:08] STARTING PASSWORD CRACKING (PARALLEL - 8 cores)
+[2026-02-02 00:02:08] ======================================================================
+[2026-02-02 00:02:08] 
+======================================================================
+[2026-02-02 00:02:08] CRACKING WORKFACTOR 8 (3 users) - 8 cores
+[2026-02-02 00:02:08] ======================================================================
+[2026-02-02 00:02:08]   Cracking Bilbo...
+[2026-02-02 00:15:18]   [+] FOUND: Bilbo's password is 'welcome' (Time: 790.59s, Word index: 131,154)
+[2026-02-02 00:15:18]   Cracking Gandalf...
+[2026-02-02 00:22:00]   [+] FOUND: Gandalf's password is 'wizard' (Time: 402.21s, Word index: 132,327)
+[2026-02-02 00:22:00]   Cracking Thorin...
+[2026-02-02 00:28:37]   [+] FOUND: Thorin's password is 'diamond' (Time: 396.26s, Word index: 31,383)
+[2026-02-02 00:28:37] 
+======================================================================
+[2026-02-02 00:28:37] CRACKING WORKFACTOR 9 (2 users) - 8 cores
+[2026-02-02 00:28:37] ======================================================================
+[2026-02-02 00:28:37]   Cracking Fili...
+[2026-02-02 00:42:05]   [+] FOUND: Fili's password is 'desire' (Time: 808.29s, Word index: 30,865)
+[2026-02-02 00:42:05]   Cracking Kili...
