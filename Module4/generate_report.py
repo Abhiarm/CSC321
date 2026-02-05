@@ -401,29 +401,41 @@ def create_report():
     # ==================== CODE APPENDIX ====================
     story.append(Paragraph("CODE APPENDIX", title_style))
     
+    # Define code style for code blocks
+    code_style_block = ParagraphStyle(
+        'CodeBlock',
+        parent=styles['Code'],
+        fontSize=6,
+        leftIndent=10,
+        rightIndent=10,
+        spaceAfter=10,
+        backColor=colors.Color(0.95, 0.95, 0.95),
+        fontName='Courier'
+    )
+    
     # Task 1 Code
     story.append(Paragraph("Task 1: SHA256 Implementation (task1_sha256.py)", heading_style))
-    story.append(Paragraph(
-        "See the attached file task1_sha256.py for the complete implementation including:<br/>"
-        "• SHA256 hashing function<br/>"
-        "• Truncated hash function<br/>"
-        "• Hamming distance calculation<br/>"
-        "• Birthday attack collision finder<br/>"
-        "• Graph generation for collision analysis",
-        body_style
-    ))
+    
+    # Read and include task1 code
+    try:
+        with open('Module4/task1_sha256.py', 'r') as f:
+            task1_code = f.read()
+        story.append(Preformatted(task1_code, code_style_block))
+    except FileNotFoundError:
+        story.append(Paragraph("Code file not found.", body_style))
+    
+    story.append(PageBreak())
     
     # Task 2 Code
     story.append(Paragraph("Task 2: Bcrypt Cracker (task2_bcrypt_cracker.py)", heading_style))
-    story.append(Paragraph(
-        "See the attached file task2_bcrypt_cracker.py for the complete implementation including:<br/>"
-        "• Shadow file parser<br/>"
-        "• NLTK word corpus loader<br/>"
-        "• Password verification using bcrypt.checkpw()<br/>"
-        "• Workfactor-grouped cracking for efficiency<br/>"
-        "• Progress reporting and results saving",
-        body_style
-    ))
+    
+    # Read and include task2 code
+    try:
+        with open('Module4/task2_bcrypt_cracker.py', 'r') as f:
+            task2_code = f.read()
+        story.append(Preformatted(task2_code, code_style_block))
+    except FileNotFoundError:
+        story.append(Paragraph("Code file not found.", body_style))
     
     # Interesting Observations
     story.append(Paragraph("Interesting Observations", heading_style))
